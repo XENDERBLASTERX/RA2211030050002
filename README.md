@@ -1,25 +1,25 @@
-##COMPUTER NETWORKS – 21CSC302J
-##Computer Network Lab Exam: LAN and WAN Configuration
-##Aim:
+## COMPUTER NETWORKS – 21CSC302J##
+## Computer Network Lab Exam: LAN and WAN Configuration
+## Aim:
 Create and configure a topology for both LAN and WAN using 10-15 computers, routers, and switches and Simulate the transmission of a message from one network to a computer in another network.
 Topology Design
 The desired Topology setup required for the give problem statement:
-##LAN 1:
+# #LAN 1:
 ●	IP Range: 192.168.1.0/24
 ●	Devices: 5 PCs
 ●	Switch: Switch 1
 ●	Router: Router 1
-##LAN 2:
+# #LAN 2:
 ●	IP Range: 192.168.2.0/24
 ●	Devices: 5 PCs
 ●	Switch: Switch 2
 ●	Router: Router 2
-##WAN:
+# #WAN:
 ●	IP Range: 10.0.0.0/30 (Point-to-Point Connection)
 ●	Connection: Between Router 1 and Router 2
-##Procedure:
-##Step 1: Topology Setup
-##Add Devices:
+## Procedure:
+# #Step 1: Topology Setup
+# #Add Devices:
 ●	LAN 1:
 5 PCs, 1 switch (Switch 1), 1 router (Router 1).
 ●	LAN 2:
@@ -42,7 +42,7 @@ Step 2: IP Address Assignment
 ●	PC3: 192.168.1.4 / 255.255.255.0 / Gateway: 192.168.1.1
 ●	PC4: 192.168.1.5 / 255.255.255.0 / Gateway: 192.168.1.1
 ●	PC5: 192.168.1.6 / 255.255.255.0 / Gateway: 192.168.1.1
-##Router 1 Configuration:
+# #Router 1 Configuration:
 enable
 configure terminal
 interface GigabitEthernet0/0
@@ -55,13 +55,13 @@ clock rate 64000
 no shutdown
 exit
 write memory
-##LAN 2:
+# #LAN 2:
 ●	PC6: 192.168.2.2 / 255.255.255.0 / Gateway: 192.168.2.1
 ●	PC7: 192.168.2.3 / 255.255.255.0 / Gateway: 192.168.2.1
 ●	PC8: 192.168.2.4 / 255.255.255.0 / Gateway: 192.168.2.1
 ●	PC9: 192.168.2.5 / 255.255.255.0 / Gateway: 192.168.2.1
 ●	PC10: 192.168.2.6 / 255.255.255.0 / Gateway: 192.168.2.1
-##Router 2 Configuration:
+# #Router 2 Configuration:
 enable
 configure terminal
 interface GigabitEthernet0/0
@@ -74,7 +74,7 @@ no shutdown
 exit
 write memory
 Step 3: Configure Routing
-##Router 1 Static Route:
+# #Router 1 Static Route:
 configure terminal
 ip route 192.168.2.0 255.255.255.0 10.0.0.2
 exit
